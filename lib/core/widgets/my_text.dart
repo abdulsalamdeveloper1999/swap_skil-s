@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+
+class MyText extends StatelessWidget {
+  final String text;
+  final TextAlign? textAlign;
+  final double? fontSize;
+  final FontWeight? fontWeight;
+  final Color? color;
+  const MyText(
+      {super.key,
+      required this.text,
+      this.textAlign,
+      this.fontSize,
+      this.fontWeight,
+      this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      textAlign: textAlign,
+      text,
+      style: TextStyle(
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+        color: color,
+      ),
+    );
+  }
+}
